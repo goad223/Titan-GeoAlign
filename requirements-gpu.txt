@@ -1,0 +1,52 @@
+# =============================================================================
+# Titan-GeoAlign — GPU / CUDA Requirements
+# CUDA 12.4 build of PyTorch and optional acceleration libraries
+# =============================================================================
+# Install with:
+#   pip install -r requirements.txt
+#   pip install -r requirements-gpu.txt
+#
+# NOTE: CUDA 12.4 binaries require a compatible NVIDIA driver (>=550.54.14).
+# =============================================================================
+
+--extra-index-url https://download.pytorch.org/whl/cu124
+
+# ---------------------------------------------------------------------------
+# PyTorch CUDA build (replaces CPU wheels from requirements.txt)
+# ---------------------------------------------------------------------------
+torch==2.5.0+cu124
+torchvision==0.20.0+cu124
+torchaudio==2.5.0+cu124
+
+# ---------------------------------------------------------------------------
+# Memory-efficient attention & CUDA kernels
+# ---------------------------------------------------------------------------
+xformers==0.0.28.post1
+
+# ---------------------------------------------------------------------------
+# NVIDIA CUDA runtime helpers (installed via pip for portability)
+# ---------------------------------------------------------------------------
+nvidia-cuda-runtime-cu12==12.4.99
+nvidia-cudnn-cu12==9.1.0.70
+nvidia-cublas-cu12==12.4.2.65
+nvidia-cufft-cu12==11.2.1.3
+
+# ---------------------------------------------------------------------------
+# Flash Attention 2 — fast transformer attention kernels
+# ---------------------------------------------------------------------------
+# Requires a C++17 compiler and CUDA toolkit on the build host.
+# Pre-built wheels for common configurations:
+flash-attn==2.6.3
+
+# ---------------------------------------------------------------------------
+# Triton (JIT GPU kernel compiler, ships with PyTorch but pinned here)
+# ---------------------------------------------------------------------------
+triton==3.0.0
+
+# ---------------------------------------------------------------------------
+# cuSpatial / cuDF (RAPIDS) — optional GPU-accelerated geospatial ops
+# Uncomment and adjust RAPIDS version to match your CUDA/driver versions.
+# ---------------------------------------------------------------------------
+# --extra-index-url https://pypi.nvidia.com
+# cudf-cu12==24.08.*
+# cuspatial-cu12==24.08.*
