@@ -1,0 +1,27 @@
+defaults:
+  - default
+
+pipeline:
+  precision: "float64"
+
+matchers:
+  enabled: [roma_v2, mast3r, gim_dkmv3, xfeat_lightglue, xoftr, rift2, omniglue]
+  max_keypoints: 8192
+  confidence_threshold: 0.7
+
+subpixel:
+  method: "lsm"
+  target_accuracy: 0.01
+
+ransac:
+  method: "magsac++"
+  max_iterations: 100000
+  inlier_threshold: 1.0
+  confidence: 0.99999
+
+local_correction:
+  grid_size: 128
+  rmse_threshold: 0.5
+
+uncertainty:
+  mc_dropout_samples: 30

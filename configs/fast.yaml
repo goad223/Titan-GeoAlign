@@ -1,0 +1,25 @@
+defaults:
+  - default
+
+pipeline:
+  precision: "float16"
+
+matchers:
+  enabled: [xfeat_lightglue]
+  max_keypoints: 2048
+  confidence_threshold: 0.4
+
+subpixel:
+  method: "phase_correlation"
+  target_accuracy: 0.5
+
+ransac:
+  method: "magsac++"
+  max_iterations: 1000
+
+local_correction:
+  grid_size: 32
+  rmse_threshold: 2.0
+
+uncertainty:
+  enabled: false

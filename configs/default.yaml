@@ -1,0 +1,77 @@
+# Titan-GeoAlign Default Configuration
+defaults:
+  - _self_
+
+pipeline:
+  name: "titan-geoalign"
+  version: "0.1.0"
+  device: "auto"  # auto, cuda, cpu
+  precision: "float32"
+  seed: 42
+
+ingestion:
+  max_file_size_gb: 50
+  supported_formats: [tif, tiff, img, nc, h5, hdf5, jp2, png, jpg]
+  auto_detect_sensor: true
+  crs_target: "EPSG:4326"
+
+geometric:
+  dem_source: "copernicus_glo30"
+  rpc_correction: true
+  orthorectification: true
+  dem_cache_dir: "data/dem_cache"
+
+foundation:
+  model: "prithvi_eo_2"
+  device: "auto"
+  batch_size: 4
+  embedding_dim: 768
+  mask_clouds: true
+  mask_vehicles: true
+  mask_crops: false
+
+matchers:
+  enabled: [roma_v2, xfeat_lightglue, rift2]
+  primary: "roma_v2"
+  max_keypoints: 4096
+  confidence_threshold: 0.5
+  models_dir: "models/matchers"
+
+ensemble:
+  strategy: "confidence_weighted"
+  min_matchers: 2
+  outlier_threshold: 3.0
+
+subpixel:
+  method: "phase_correlation"
+  target_accuracy: 0.1
+
+ransac:
+  method: "magsac++"
+  model: "auto"
+  max_iterations: 10000
+  inlier_threshold: 2.0
+  confidence: 0.9999
+
+local_correction:
+  enabled: true
+  grid_size: 64
+  rmse_threshold: 1.0
+  auto_retry: true
+
+output:
+  format: "GTiff"
+  compress: "lzw"
+  tiled: true
+  tile_size: 512
+  overviews: true
+
+uncertainty:
+  enabled: true
+  mc_dropout_samples: 10
+  output_uncertainty_map: true
+
+logging:
+  level: "INFO"
+  format: "json"
+  file: null
