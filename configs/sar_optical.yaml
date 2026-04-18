@@ -1,0 +1,19 @@
+defaults:
+  - default
+
+pipeline:
+  name: "titan-geoalign-sar-optical"
+
+translation:
+  enabled: true
+  method: "sar_to_optical_diffusion"
+  model: "sar2optical_diffusion_v1"
+
+matchers:
+  enabled: [xoftr, roma_v2, rift2]
+  primary: "xoftr"
+  max_keypoints: 4096
+
+foundation:
+  model: "dofa"
+  modalities: [sar, optical]

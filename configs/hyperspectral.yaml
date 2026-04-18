@@ -1,0 +1,17 @@
+defaults:
+  - default
+
+pipeline:
+  name: "titan-geoalign-hyperspectral"
+
+ingestion:
+  band_selection: "auto"
+  spectral_resampling: true
+
+foundation:
+  model: "dofa"
+  modalities: [hyperspectral]
+
+translation:
+  method: "hyperspectral_harmonization"
+  target_bands: [red, green, blue, nir, swir1, swir2]

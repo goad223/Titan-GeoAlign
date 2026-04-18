@@ -1,0 +1,51 @@
+---
+# ClusterIP Service — internal cluster access
+apiVersion: v1
+kind: Service
+metadata:
+  name: titan-geoalign
+  namespace: titan
+  labels:
+    app: titan-geoalign
+    component: api
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "8000"
+    prometheus.io/path: "/metrics"
+spec:
+  type: ClusterIP
+  selector:
+    app: titan-geoalign
+    component: api
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8000
+    - name: metrics
+      protocol: TCP
+      port: 8000
+      targetPort: 8000
+
+---
+# NodePort Service — direct external access (development / edge)
+apiVersion: v1
+kind: Service
+metadata:
+  name: titan-geoalign-nodeport
+  namespace: titan
+  labels:
+    app: titan-geoalign
+    component: api
+    service-type: nodeport
+spec:
+  type: NodePort
+  selector:
+    app: titan-geoalign
+    component: api
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8000
+      nodePort: 30800
