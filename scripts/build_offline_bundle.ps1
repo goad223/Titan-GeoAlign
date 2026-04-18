@@ -64,7 +64,7 @@ if (-not $SkipModels) {
     Copy-Item -Path (Join-Path $ModelsDir "*") -Destination $BundleModels -Recurse -Force
     Log-Ok "Models copied."
 } else {
-    Log-Warn "Skipping model download (–SkipModels)."
+    Log-Warn "Skipping model download (--SkipModels)."
 }
 
 # ── Step 2 — Download pip wheels ─────────────────────────────────────────────
@@ -85,7 +85,7 @@ if (-not $SkipWheels) {
         Log-Warn "requirements.txt not found; skipping wheel download."
     }
 } else {
-    Log-Warn "Skipping wheel download (–SkipWheels)."
+    Log-Warn "Skipping wheel download (--SkipWheels)."
 }
 
 # ── Step 3 — Download conda packages ─────────────────────────────────────────
@@ -108,7 +108,7 @@ if (-not $SkipConda) {
         Log-Warn "conda not found; skipping conda package download."
     }
 } else {
-    Log-Warn "Skipping conda download (–SkipConda)."
+    Log-Warn "Skipping conda download (--SkipConda)."
 }
 
 # ── Step 4 — Package and create checksums ────────────────────────────────────

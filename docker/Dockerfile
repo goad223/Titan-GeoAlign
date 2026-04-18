@@ -40,7 +40,7 @@ FROM python:3.12-slim AS runtime
 LABEL org.opencontainers.image.title="Titan-GeoAlign"
 LABEL org.opencontainers.image.description="Sub-pixel geospatial image alignment pipeline"
 LABEL org.opencontainers.image.source="https://github.com/goad223/Titan-GeoAlign"
-LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.licenses="Apache-2.0"
 
 ARG DEBIAN_FRONTEND=noninteractive
 ARG APP_USER=titan
