@@ -1,0 +1,40 @@
+{
+  "name": "planetscope",
+  "display_name": "PlanetScope",
+  "platform": "PlanetScope",
+  "sensor_type": "optical",
+  "resolution_m": 3.0,
+  "bands": [
+    {
+      "name": "B1",
+      "wavelength_nm": 490,
+      "alias": "blue",
+      "resolution_m": 3.0
+    },
+    {
+      "name": "B2",
+      "wavelength_nm": 565,
+      "alias": "green",
+      "resolution_m": 3.0
+    },
+    {
+      "name": "B3",
+      "wavelength_nm": 665,
+      "alias": "red",
+      "resolution_m": 3.0
+    },
+    {
+      "name": "B4",
+      "wavelength_nm": 865,
+      "alias": "nir",
+      "resolution_m": 3.0
+    }
+  ],
+  "filename_patterns": [
+    "PSScene",
+    "planet",
+    "^\\d{8}_\\d{6}_.*_3B_"
+  ],
+  "description_en": "Planet Labs PlanetScope cubesat constellation, 3 m daily imagery.",
+  "description_ar": "كوكبة بلانت سكوب من الأقمار المصغرة بدقة 3 أمتار يومياً."
+}

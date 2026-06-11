@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "changemaster"
+version = "0.1.0"
+description = "ChangeMaster Ultimate - Offline satellite image change detection for Windows (Phase 1: Foundation)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "ChangeMaster Team" }]
+dependencies = [
+    "numpy>=1.24",
+    "Pillow>=10.0",
+]
+
+[project.optional-dependencies]
+raster = ["rasterio>=1.3"]
+hdf = ["h5py>=3.8"]
+netcdf = ["netCDF4>=1.6"]
+hardware = ["psutil>=5.9"]
+full = ["rasterio>=1.3", "h5py>=3.8", "netCDF4>=1.6", "psutil>=5.9"]
+dev = ["pytest>=7.4", "pytest-cov>=4.1"]
+
+[project.scripts]
+titan-info = "scripts.titan_info:main"
+titan-inspect = "scripts.titan_inspect:main"
+
+[tool.setuptools.packages.find]
+include = ["changemaster*"]
+
+[tool.setuptools.package-data]
+"changemaster.sensors" = ["definitions/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.coverage.run]
+source = ["changemaster"]
+omit = ["changemaster/gui/*", "changemaster/engines/*", "changemaster/preprocessing/*"]

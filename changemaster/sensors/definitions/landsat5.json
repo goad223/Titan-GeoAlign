@@ -1,0 +1,57 @@
+{
+  "name": "landsat5",
+  "display_name": "Landsat 5 TM",
+  "platform": "Landsat-5",
+  "sensor_type": "optical",
+  "resolution_m": 30.0,
+  "bands": [
+    {
+      "name": "B1",
+      "wavelength_nm": 485,
+      "alias": "blue",
+      "resolution_m": 30
+    },
+    {
+      "name": "B2",
+      "wavelength_nm": 560,
+      "alias": "green",
+      "resolution_m": 30
+    },
+    {
+      "name": "B3",
+      "wavelength_nm": 660,
+      "alias": "red",
+      "resolution_m": 30
+    },
+    {
+      "name": "B4",
+      "wavelength_nm": 830,
+      "alias": "nir",
+      "resolution_m": 30
+    },
+    {
+      "name": "B5",
+      "wavelength_nm": 1650,
+      "alias": "swir1",
+      "resolution_m": 30
+    },
+    {
+      "name": "B6",
+      "wavelength_nm": 11450,
+      "alias": "thermal",
+      "resolution_m": 120
+    },
+    {
+      "name": "B7",
+      "wavelength_nm": 2215,
+      "alias": "swir2",
+      "resolution_m": 30
+    }
+  ],
+  "filename_patterns": [
+    "^LT05_",
+    "^LT5"
+  ],
+  "description_en": "NASA/USGS Landsat 5 Thematic Mapper, 30 m multispectral.",
+  "description_ar": "لاندسات 5 (الماسح الموضوعي TM) بدقة 30 متراً."
+}

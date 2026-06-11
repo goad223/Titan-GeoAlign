@@ -1,0 +1,58 @@
+{
+  "name": "modis",
+  "display_name": "MODIS (Terra/Aqua)",
+  "platform": "MODIS",
+  "sensor_type": "optical",
+  "resolution_m": 250.0,
+  "bands": [
+    {
+      "name": "B1",
+      "wavelength_nm": 645,
+      "alias": "red",
+      "resolution_m": 250
+    },
+    {
+      "name": "B2",
+      "wavelength_nm": 858,
+      "alias": "nir",
+      "resolution_m": 250
+    },
+    {
+      "name": "B3",
+      "wavelength_nm": 469,
+      "alias": "blue",
+      "resolution_m": 500
+    },
+    {
+      "name": "B4",
+      "wavelength_nm": 555,
+      "alias": "green",
+      "resolution_m": 500
+    },
+    {
+      "name": "B5",
+      "wavelength_nm": 1240,
+      "alias": "nir_swir",
+      "resolution_m": 500
+    },
+    {
+      "name": "B6",
+      "wavelength_nm": 1640,
+      "alias": "swir1",
+      "resolution_m": 500
+    },
+    {
+      "name": "B7",
+      "wavelength_nm": 2130,
+      "alias": "swir2",
+      "resolution_m": 500
+    }
+  ],
+  "filename_patterns": [
+    "^MOD\\d{2}",
+    "^MYD\\d{2}",
+    "^MCD\\d{2}"
+  ],
+  "description_en": "NASA MODIS imager on Terra and Aqua, 250-1000 m.",
+  "description_ar": "مستشعر موديس على القمرين تيرا وأكوا بدقة 250-1000 متر."
+}

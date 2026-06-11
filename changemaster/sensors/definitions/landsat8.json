@@ -1,0 +1,82 @@
+{
+  "name": "landsat8",
+  "display_name": "Landsat 8 OLI/TIRS",
+  "platform": "Landsat-8",
+  "sensor_type": "optical",
+  "resolution_m": 30.0,
+  "bands": [
+    {
+      "name": "B1",
+      "wavelength_nm": 443,
+      "alias": "coastal",
+      "resolution_m": 30
+    },
+    {
+      "name": "B2",
+      "wavelength_nm": 482,
+      "alias": "blue",
+      "resolution_m": 30
+    },
+    {
+      "name": "B3",
+      "wavelength_nm": 562,
+      "alias": "green",
+      "resolution_m": 30
+    },
+    {
+      "name": "B4",
+      "wavelength_nm": 655,
+      "alias": "red",
+      "resolution_m": 30
+    },
+    {
+      "name": "B5",
+      "wavelength_nm": 865,
+      "alias": "nir",
+      "resolution_m": 30
+    },
+    {
+      "name": "B6",
+      "wavelength_nm": 1610,
+      "alias": "swir1",
+      "resolution_m": 30
+    },
+    {
+      "name": "B7",
+      "wavelength_nm": 2200,
+      "alias": "swir2",
+      "resolution_m": 30
+    },
+    {
+      "name": "B8",
+      "wavelength_nm": 590,
+      "alias": "pan",
+      "resolution_m": 15
+    },
+    {
+      "name": "B9",
+      "wavelength_nm": 1375,
+      "alias": "cirrus",
+      "resolution_m": 30
+    },
+    {
+      "name": "B10",
+      "wavelength_nm": 10900,
+      "alias": "thermal1",
+      "resolution_m": 100
+    },
+    {
+      "name": "B11",
+      "wavelength_nm": 12000,
+      "alias": "thermal2",
+      "resolution_m": 100
+    }
+  ],
+  "filename_patterns": [
+    "^LC08_",
+    "^LC8",
+    "^LO08_"
+  ],
+  "description_en": "NASA/USGS Landsat 8 Operational Land Imager and TIRS.",
+  "description_ar": "لاندسات 8 بمستشعري OLI و TIRS بدقة 30 متراً."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "sentinel1",
+  "display_name": "Sentinel-1 (SAR)",
+  "platform": "Sentinel-1",
+  "sensor_type": "sar",
+  "resolution_m": 10.0,
+  "bands": [
+    {
+      "name": "VV",
+      "wavelength_nm": 0,
+      "alias": "vv",
+      "resolution_m": 10.0
+    },
+    {
+      "name": "VH",
+      "wavelength_nm": 0,
+      "alias": "vh",
+      "resolution_m": 10.0
+    },
+    {
+      "name": "HH",
+      "wavelength_nm": 0,
+      "alias": "hh",
+      "resolution_m": 10.0
+    },
+    {
+      "name": "HV",
+      "wavelength_nm": 0,
+      "alias": "hv",
+      "resolution_m": 10.0
+    }
+  ],
+  "filename_patterns": [
+    "^S1[AB]_"
+  ],
+  "description_en": "ESA Sentinel-1 C-band synthetic aperture radar mission.",
+  "description_ar": "مهمة سنتينل-1 الأوروبية برادار الفتحة التركيبية بالنطاق C."
+}

@@ -1,0 +1,11 @@
+{
+  "name": "generic",
+  "display_name": "Generic Raster",
+  "platform": "Generic",
+  "sensor_type": "optical",
+  "resolution_m": 0.0,
+  "bands": [],
+  "filename_patterns": [],
+  "description_en": "Fallback profile for unrecognized imagery.",
+  "description_ar": "بروفايل افتراضي للصور غير المعروفة."
+}

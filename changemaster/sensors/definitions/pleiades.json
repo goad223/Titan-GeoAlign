@@ -1,0 +1,46 @@
+{
+  "name": "pleiades",
+  "display_name": "Pléiades 1A/1B",
+  "platform": "Pleiades",
+  "sensor_type": "optical",
+  "resolution_m": 0.5,
+  "bands": [
+    {
+      "name": "B0",
+      "wavelength_nm": 490,
+      "alias": "blue",
+      "resolution_m": 2.0
+    },
+    {
+      "name": "B1",
+      "wavelength_nm": 555,
+      "alias": "green",
+      "resolution_m": 2.0
+    },
+    {
+      "name": "B2",
+      "wavelength_nm": 660,
+      "alias": "red",
+      "resolution_m": 2.0
+    },
+    {
+      "name": "B3",
+      "wavelength_nm": 845,
+      "alias": "nir",
+      "resolution_m": 2.0
+    },
+    {
+      "name": "PAN",
+      "wavelength_nm": 600,
+      "alias": "pan",
+      "resolution_m": 0.5
+    }
+  ],
+  "filename_patterns": [
+    "^PHR1[AB]",
+    "PLEIADES",
+    "^IMG_PHR"
+  ],
+  "description_en": "Airbus Pléiades very-high-resolution optical satellites.",
+  "description_ar": "أقمار بلياديس البصرية عالية الدقة جداً من إيرباص."
+}

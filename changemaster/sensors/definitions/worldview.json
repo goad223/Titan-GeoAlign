@@ -1,0 +1,71 @@
+{
+  "name": "worldview",
+  "display_name": "WorldView-2/3",
+  "platform": "WorldView",
+  "sensor_type": "optical",
+  "resolution_m": 0.31,
+  "bands": [
+    {
+      "name": "COASTAL",
+      "wavelength_nm": 427,
+      "alias": "coastal",
+      "resolution_m": 1.24
+    },
+    {
+      "name": "BLUE",
+      "wavelength_nm": 478,
+      "alias": "blue",
+      "resolution_m": 1.24
+    },
+    {
+      "name": "GREEN",
+      "wavelength_nm": 546,
+      "alias": "green",
+      "resolution_m": 1.24
+    },
+    {
+      "name": "YELLOW",
+      "wavelength_nm": 608,
+      "alias": "yellow",
+      "resolution_m": 1.24
+    },
+    {
+      "name": "RED",
+      "wavelength_nm": 659,
+      "alias": "red",
+      "resolution_m": 1.24
+    },
+    {
+      "name": "REDEDGE",
+      "wavelength_nm": 724,
+      "alias": "rededge1",
+      "resolution_m": 1.24
+    },
+    {
+      "name": "NIR1",
+      "wavelength_nm": 833,
+      "alias": "nir",
+      "resolution_m": 1.24
+    },
+    {
+      "name": "NIR2",
+      "wavelength_nm": 949,
+      "alias": "nir2",
+      "resolution_m": 1.24
+    },
+    {
+      "name": "PAN",
+      "wavelength_nm": 625,
+      "alias": "pan",
+      "resolution_m": 0.31
+    }
+  ],
+  "filename_patterns": [
+    "^WV0[23]",
+    "WV2_",
+    "WV3_",
+    "worldview"
+  ],
+  "description_en": "Maxar WorldView very-high-resolution imagers (0.31-1.24 m).",
+  "description_ar": "أقمار وورلد فيو عالية الدقة جداً (0.31-1.24 متر)."
+}

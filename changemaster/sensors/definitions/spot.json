@@ -1,0 +1,45 @@
+{
+  "name": "spot",
+  "display_name": "SPOT 6/7",
+  "platform": "SPOT",
+  "sensor_type": "optical",
+  "resolution_m": 1.5,
+  "bands": [
+    {
+      "name": "B0",
+      "wavelength_nm": 485,
+      "alias": "blue",
+      "resolution_m": 6.0
+    },
+    {
+      "name": "B1",
+      "wavelength_nm": 560,
+      "alias": "green",
+      "resolution_m": 6.0
+    },
+    {
+      "name": "B2",
+      "wavelength_nm": 660,
+      "alias": "red",
+      "resolution_m": 6.0
+    },
+    {
+      "name": "B3",
+      "wavelength_nm": 825,
+      "alias": "nir",
+      "resolution_m": 6.0
+    },
+    {
+      "name": "PAN",
+      "wavelength_nm": 625,
+      "alias": "pan",
+      "resolution_m": 1.5
+    }
+  ],
+  "filename_patterns": [
+    "^SPOT[67]",
+    "^IMG_SPOT"
+  ],
+  "description_en": "Airbus SPOT 6/7 high-resolution optical satellites.",
+  "description_ar": "أقمار سبوت 6/7 البصرية عالية الدقة من إيرباص."
+}
